@@ -109,11 +109,17 @@ body{
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap:2vh;
-        margin: 2rem 0;
+        gap: 2rem;
+        margin: 2vh auto;
+    }
+    .grid-container>div {
+        padding: 3vw;
     }
     body {
-        padding: 1rem;
+        padding: 2rem;
+    }
+    .section{
+        padding: 1vw;
     }
     /* .item1{
         grid-row: 1/3;
