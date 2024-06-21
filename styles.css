@@ -89,11 +89,8 @@ p{
     color: var(--color-White);
 }
 @media (min-width:426px){
-    body{
-        height: 100vh;
-    }
     .grid-container{
-    height: min(900px,150rem); 
+    /* height: min(900px,150rem);  */
     display: grid;
     width: min(1200px,270rem);
     grid-template: repeat(4,min(300px,70rem) )/ repeat(2,min(300px,70rem)) ;
