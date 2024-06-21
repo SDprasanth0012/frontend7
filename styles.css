@@ -1,0 +1,130 @@
+:root {
+    --color-Moderate_violet: hsl(263, 55%, 52%);
+    --color-Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --color-Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Light_gray: hsl(0, 0%, 81%);
+    --color-Light_grayish_blue: hsl(210, 46%, 95%);
+    --font : "Barlow Semi Condensed", sans-serif;
+    }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color-Light_grayish_blue);
+    display: grid;
+    place-items: center;
+    font-family: var( --font);
+}
+.name{
+    font-size: 1rem;
+}
+.author{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+.verify{
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 50%;
+    margin-left: 1rem;
+}
+.state1{
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+.quote {
+    font-size: 0.9rem;
+    opacity: 70%;
+}
+Img {
+    width: 30px;
+    aspect-ratio: 1;
+    grid-column: 1/2;
+    grid-row:1/3;
+    min-inline-size: 100%;
+    border-radius: 50%;
+    align-self: center;
+}
+p{
+    grid-column: 2/3;
+}
+
+.grid-container>div {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item1{
+    background-color: var(--color-Moderate_violet);
+    grid-column: 1/3;
+}
+.item2{
+    background-color: var(--color-Very_dark_grayish_blue);
+    grid-column: 3;
+}
+.item3{
+    background-color: var(--color-White);
+    grid-column: 1;
+}
+.item4{
+    background-color: var(--color-Very_dark_grayish_blue);
+    grid-column: 2/4;
+}
+.item5{
+    background-color: var(--color-White);
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+.font-white{
+    color: var(--color-White);
+}
+@media (min-width:426px){
+    body{
+        height: 100vh;
+    }
+    .grid-container{
+    height: min(900px,150rem); 
+    display: grid;
+    width: min(1200px,270rem);
+    grid-template: repeat(4,min(300px,70rem) )/ repeat(2,min(300px,70rem)) ;
+    gap : 2rem;
+
+    }
+}
+@media (max-width:425px){
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap:2rem;
+        margin: 2rem 0;
+    }
+    body{
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        
+    }
+    /* .item1{
+        grid-row: 1/3;
+    }
+    .item2{
+        grid-row:3/4;
+    }
+    .item3{
+        grid-row: 4/5;
+    }
+    .item4{
+        grid-row: 5/7;
+    } */
+}
